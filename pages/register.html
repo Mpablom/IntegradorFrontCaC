@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC-MOVIES</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/b18cc56dac.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&amp;display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bodyRegister" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    <header class="headerRegister">
+        <a class="anclaLogo" href="../index.html">
+            <i class="fas fa-film" aria-hidden="true"></i>
+        <span>CAC-Movies</span>
+        </a>
+    </header>
+    <main id="main" class="main">
+        <section class="sectionRegister" data-aos="zoom-in" data-aos-duration="1000">
+            <form action="" method="get">
+                <h2 class="titleRegister">Registro</h2>
+                <div>
+                    <input id="name" type="text" placeholder="Nombre" name="name">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input id="lastName" type="text" placeholder="Apellido" name="lastName">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input id="email" type="email" placeholder="Email" name="email">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input id="password" type="password" placeholder="Contraseña" name="password">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input id="brithday" type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" name="brithday">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <select name="pais" id="pais">
+                        <option value="">País</option>
+                        <option value="AR">Argentina</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BR">Brasil</option>
+                        <option value="CH">Chile</option>
+                        <option value="CO">Colombia</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Perú</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="VE">Venezuela</option>
+                    </select>
+                    <div class="error-text"></div>
+                </div>
+                <div class="terms">
+                    <input class="check" type="checkbox" id="terms">
+                    <label class="textCheck" for="terms">Acepto términos y condiciones</label>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input class="buttonRegister" type="submit" value="Registrarse">
+                </div>
+                <div>
+                    <a class="help" href="#">Necesitas ayuda?</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

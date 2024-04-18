@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC-MOVIES</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/b18cc56dac.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&amp;display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    <header class="header">
+        <nav class="navBar">
+            <a class="anclaLogo" href="#">
+                <i class="fas fa-film" aria-hidden="true"></i>
+                <span>CAC-Movies</span>
+            </a>
+            <ul class="listNav">
+                <li class="listItem">
+                    <a class="linkNav" href="#trend">Tendencias</a>
+                </li>
+                <li class="listItem">
+                    <a class="linkNav" href="./pages/register.html">Registrarse</a>
+                </li>
+                <li class="listItem">
+                    <a class="linkNav session" href="./pages/login.html">Iniciar Sesión</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="main">
+        <section class="sectionMain" data-aos="zoom-in" data-aos-duration="1000">
+            <h1 class="title">
+                Películas y series ilimitadas
+                <br>
+                en un solo lugar
+            </h1>
+            <h2 class="subtitle">
+                Disfruta donde quieras.
+                <br>
+                Cancela en cualquier momento.
+            </h2>
+            <a class="registerButton" href="./pages/register.html">Registrate</a>
+        </section>
+        <section class="sectionSearch" data-aos="fade-up" data-aos-offset="300" data-aos-delay="50"
+            data-aos-duration="1000">
+            <h2 class="titleSection">¿Qué estás esperando para ver?</h2>
+            <form class="movieSearch">
+                <input id="search" class="inputSearch" type="text" placeholder="Buscar..." name="buscar">
+                <input class="searchButton" type="submit" value="Buscar">
+            </form>
+        </section>
+        <hr>
+        <section id="trend" class="moviesTrend" data-aos="fade-up" data-aos-offset="400" data-aos-delay="100"
+            data-aos-duration="1000" data-page="1">
+            <h3 class="titleSection">Las tendencias de hoy</h3>
+            <div id="trendContainer" class="movies">
+            </div>
+            <button class="button prev">Anterior</button>
+            <button class="button next">Siguiente</button>
+        </section>
+        <hr>
+        <section class="acclaimedMovies" data-aos="fade-up" data-aos-offset="300" data-aos-delay="50"
+             data-aos-duration="1000">
+            <h3 class="titleSection">Las más aclamadas</h3>
+            <div id="acclaimedContainer" class="acclaimed">
+                
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="navBar">
+            <ul class="listNav">
+                <li class="listItem">
+                    <a class="linkNav" href="">Términos y condiciones</a>
+                </li>
+                <li class="listItem">
+                    <a class="linkNav" href="">Preguntas frecuentes</a>
+                </li>
+                <li class="listItem">
+                    <a class="linkNav" href="">Ayuda</a>
+                </li>
+                <li class="listItem">
+                    <a class="linkNav adminMovies" href="">Administrador de Películas</a>
+                </li>
+            </ul>
+        </nav>
+        <a class="arrowUp" href="#main">
+            <i class="fas fa-chevron-circle-up"></i>
+        </a>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
