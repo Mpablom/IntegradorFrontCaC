@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const arrowUp = document.querySelector('.arrowUp');
   const arrowUpIcon = document.querySelector('.arrowUp .fas.fa-chevron-circle-up');
 
-  // Oculta la flecha cuando la página se carga inicialmente
   arrowUp.style.display = 'none';
 
   window.addEventListener('scroll', function() {
@@ -10,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const footer = document.querySelector('.footer');
 
     if (sectionMain.getBoundingClientRect().top <= window.innerHeight && sectionMain.getBoundingClientRect().bottom >= 0) {
-      arrowUp.style.display = 'none'; // Oculta la flecha en la sección principal
+      arrowUp.style.display = 'none'; 
     } else {
-      arrowUp.style.display = 'block'; // Muestra la flecha fuera de la sección principal
+      arrowUp.style.display = 'block'; 
 
       if (footer.getBoundingClientRect().top <= window.innerHeight) {
-        arrowUpIcon.style.color = '#000000'; // Cambia el color del ícono a negro en el footer
+        arrowUpIcon.style.color = '#000000'; 
       } else {
-        arrowUpIcon.style.color = '#ffffff'; // Restaura el color del ícono a blanco en otras secciones
+        arrowUpIcon.style.color = '#ffffff';
       }
     }
   });
