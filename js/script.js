@@ -1,20 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded', function () {
   const arrowUp = document.querySelector('.arrowUp');
   const arrowUpIcon = document.querySelector('.arrowUp .fas.fa-chevron-circle-up');
 
   arrowUp.style.display = 'none';
 
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     const sectionMain = document.querySelector('.sectionMain');
     const footer = document.querySelector('.footer');
 
     if (sectionMain.getBoundingClientRect().top <= window.innerHeight && sectionMain.getBoundingClientRect().bottom >= 0) {
-      arrowUp.style.display = 'none'; 
+      arrowUp.style.display = 'none';
     } else {
-      arrowUp.style.display = 'block'; 
+      arrowUp.style.display = 'block';
 
       if (footer.getBoundingClientRect().top <= window.innerHeight) {
-        arrowUpIcon.style.color = '#000000'; 
+        arrowUpIcon.style.color = '#000000';
       } else {
         arrowUpIcon.style.color = '#ffffff';
       }
@@ -52,9 +53,14 @@ function renderTrendMovies(data) {
   trendContainer.innerHTML = '';
 
   data.results.forEach(movie => {
+    const movies = document.createElement('div')
+    movies.classList.add('movies');
+    const link = document.createElement('a');
+    link.href = `./pages/detail.html?id=${movie.id}`;
+    link.dataset.movieId = movie.id;
+    link.classList.add('movie-detail');
     const movieItem = document.createElement('div');
     movieItem.classList.add('movie');
-
     const movieImg = document.createElement('img');
     movieImg.classList.add('imgTrend');
     movieImg.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
@@ -65,11 +71,15 @@ function renderTrendMovies(data) {
     movieTitle.classList.add('titlemovie');
     movieTitle.innerHTML = `<h4>${movie.title}</h4>`;
 
+    movies.appendChild(link)
+    link.appendChild(movieItem);
     movieItem.appendChild(movieImg);
     movieItem.appendChild(movieTitle);
-    trendContainer.appendChild(movieItem);
+    trendContainer.appendChild(movies);
   });
 }
+
+
 
 function renderAcclaimedMovies(data) {
   const acclaimedContainer = document.getElementById('acclaimedContainer');
@@ -133,14 +143,13 @@ function prevPageAcclaimed() {
 document.querySelector('#trend .next').addEventListener('click', nextPageTrend);
 document.querySelector('#trend .prev').addEventListener('click', prevPageTrend);
 
-// Load initial page for trend movies
+
 fetchTrendMovies()
   .then(data => {
     renderTrendMovies(data);
   })
   .catch(err => console.error(err));
 
-// Load initial page for acclaimed movies
 fetchAcclaimedMovies()
   .then(data => {
     renderAcclaimedMovies(data);
