@@ -206,8 +206,13 @@ function renderMovieTrailer(videos) {
     iframe.src = `https://www.youtube.com/embed/${latestOfficialTrailer.key}`;
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
 
+    const titleTrailer = document.createElement('h2');
+    titleTrailer.textContent = 'Ver Trailer';
+    titleTrailer.classList.add('titleTrailer');
+
     const trailerContainer = document.querySelector('.containerTrailer');
     trailerContainer.innerHTML = '';
+    trailerContainer.appendChild(titleTrailer);
     trailerContainer.appendChild(iframe);
   } else {
     console.error('No se encontró ningún trailer oficial.');

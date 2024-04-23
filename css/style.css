@@ -8,6 +8,8 @@
 body {
     background-color: #181419;
     color: #ffffff;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 hr {
@@ -151,6 +153,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .inputSearch {
@@ -167,7 +170,7 @@ a {
 
 .searchButton {
     background-color: #9f3647;
-    display: inline-flex;
+    display: inline-block;
     color: #ffffff;
     height: 50px;
     margin: 20px 10px;
@@ -377,7 +380,11 @@ h4:hover {
         font-size: 2.5rem;
     }
 
-    .buttonRegister {
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .registerButton {
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
     }
@@ -465,12 +472,14 @@ h4:hover {
         display: flex;
     }
 
-    .arrowUp {
-        right: -13px;
-        bottom: 0px;
-        font-size: 1.5rem;
+   /*  .arrowUp {
+       display: none !important;
+    } */
+    .arrowUp>i{
+        font-weight: 0;
     }
 }
+
 @media (min-width:769px) and (max-width: 827px) {
     .adminMovies {
         display: flex;
@@ -581,6 +590,60 @@ select {
 }
 
 /*#########################################################################################*/
+/*============================ REGISTER/LOGIN MEDIA QUERIES ==============================*/
+/*########################################################################################*/
+
+@media (max-width:1200px) {
+    .headerRegister {
+        padding: 20px;
+    }
+
+    .anclaLogo {
+        font-size: 1rem;
+    }
+
+    .sectionRegister {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .titleRegister {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 100%;
+        text-align: center;
+    }
+
+    input:not(.check, .buttonRegister, .searchButton, .inputSearch),
+    select {
+        width: 80%;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .terms {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 0.7rem;
+    }
+
+    .buttonRegister {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 70%;
+        padding: 0.8rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .help {
+        text-align: left;
+        font-size: 0.8rem;
+    }
+}
+
+/*#########################################################################################*/
 /*======================================= DETAIL ==========================================*/
 /*########################################################################################*/
 
@@ -668,4 +731,92 @@ th {
     color: #ffffff;
     font-size: 2.5rem;
     margin-right: 50px;
+}
+
+/*#########################################################################################*/
+/*================================ DETAIL MEDIA QUERIES ===================================*/
+/*########################################################################################*/
+
+@media (max-width: 1200px){
+
+    .detail {
+        height: initial;
+    }
+
+    .containerDetail {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .imgDetail {
+        width: 65%;
+        height: 300px;
+    }
+
+    .textDetail>h1 {
+        font-size: 1.5rem;
+    }
+
+    .textDetail>h2 {
+        font-size: 1rem;
+    }
+
+    .conteinerCredits {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .trailer {
+        width: 95%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .containerTrailer {
+        width: 100%;
+    }
+
+    .titleTrailer {
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .containerInfo {
+        width: 100%;
+    }
+
+    .networks {
+        width: 100%;
+    }
+
+    .networkList {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .networkList>li>a {
+        font-size: 2rem;
+        margin-right: 20px;
+    }
+
+    td {
+        font-size: 1rem;
+    }
+
+    hr {
+        font-size: 2rem;
+        margin-right: 20px;
+        border: 1px solid #9f3647;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
 }
