@@ -742,7 +742,7 @@ th {
 
     .containerDetail {
         flex-direction: column;
-        row-gap: 20px;
+        row-gap: 60px;
     }
 
     .imgDetail {
