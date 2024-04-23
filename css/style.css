@@ -734,7 +734,7 @@ th {
 /*================================ DETAIL MEDIA QUERIES ===================================*/
 /*########################################################################################*/
 
-@media (max-width: 1200px){
+@media  (min-width: 318px) and (max-width: 1200px){
 
     .detail {
         height: initial;
@@ -747,7 +747,6 @@ th {
 
     .imgDetail {
         width: 65%;
-        height: 300px;
     }
 
     .textDetail>h1 {
@@ -816,4 +815,10 @@ th {
         margin-top: 40px;
     }
 
+}
+
+@media (max-width: 800px){
+    .imgDetail {
+        row-gap: 150px;
+    }
 }
