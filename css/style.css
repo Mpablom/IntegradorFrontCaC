@@ -472,11 +472,8 @@ h4:hover {
         display: flex;
     }
 
-   /*  .arrowUp {
+    .arrowUp {
        display: none !important;
-    } */
-    .arrowUp>i{
-        font-weight: 0;
     }
 }
 
