@@ -23,15 +23,15 @@
     </header>
     <main id="main" class="main">
         <section class="sectionRegister" data-aos="zoom-in" data-aos-duration="1000">
-            <form action="" method="get">
+            <form id="loginForm" action="" method="get">
                 <h2 class="titleRegister">Iniciar Sesión</h2>
                 <div>
                     <input type="email" id="email" name="email" placeholder="Email">
-                    <div class="error-text"></div>
+                    <div class="error-text" id="emailError"></div>
                 </div>
                 <div>
-                    <input type="password" type="password" placeholder="Contraseña" name="email">
-                    <div class="error-text"></div>
+                    <input type="password" id="password" placeholder="Contraseña" name="password">
+                    <div class="error-text" id="passwordError"></div>
                 </div>
                 <div>
                     <input class="buttonRegister"  type="submit" value="Iniciar Sesión">
@@ -47,6 +47,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="../js/validationLogin.js"></script>
 </body>
 
 </html>
